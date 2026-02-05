@@ -6,3 +6,9 @@ export interface Ticket {
     status: "open" | "in-progress" | "resolved";
     createdAt: string;
 }
+
+export interface NewTicketRequest {
+    title: string;
+    description: string;
+    priority: "critical" | "high" | "medium" | "low";
+}
