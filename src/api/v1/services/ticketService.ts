@@ -18,3 +18,10 @@ export interface TicketWithUrgency extends Ticket {
     urgencyScore: number;
     urgencyLevel: string;
 }
+
+export interface TicketUpdate {
+    title?: string;
+    description?: string;
+    priority?: string;
+    status?: string;
+}
