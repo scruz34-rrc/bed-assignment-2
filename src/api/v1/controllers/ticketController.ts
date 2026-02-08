@@ -1,5 +1,12 @@
 import { Request, Response } from "express";
-import { getAllTickets, getTicketById, createTicket, updateTicket, deleteTicket, getTicketWithUrgency } from "../services/ticketService";
+import {
+    getAllTickets,
+    getTicketById,
+    createTicket,
+    updateTicket,
+    deleteTicket,
+    getTicketWithUrgency
+} from "../services/ticketService";
 
 import { HTTP_STATUS } from "../../../constants/httpConstants";
 import { NewTicketRequest, TicketUpdate } from "../interfaces/ticketInterfaces";
