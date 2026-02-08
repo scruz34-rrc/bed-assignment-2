@@ -87,3 +87,13 @@ export const calculateUrgency = (ticket: Ticket): {
         urgencyLevel
     };
 };
+
+export const getTicketWithUrgency = (id: number): {
+    ticketAge: number;
+    urgencyScore: number;
+    urgencyLevel: string;
+} | null => {
+    const ticket = getTicketById(id);
+    if (!ticket) return null;
+    return calculateUrgency(ticket);
+};
