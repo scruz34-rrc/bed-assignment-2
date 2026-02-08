@@ -25,10 +25,3 @@ export interface TicketUpdate {
     priority?: string;
     status?: string;
 }
-
-export interface CreateTicketData {
-    title: string;
-    description: string;
-    priority: string;
-    status: string;
-}
