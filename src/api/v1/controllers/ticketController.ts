@@ -18,8 +18,9 @@ export const getAllTicketsHandler = (req: Request, res: Response): void => {
     try {
         const tickets = getAllTickets();
         res.status(HTTP_STATUS.OK).json({
-            data: tickets,
-            count: tickets.length
+            message: "Tickets retrieved",
+            count: tickets.length,
+            data: tickets
         });
     } 
     catch (error) {
@@ -200,7 +201,7 @@ export const getTicketUrgencyHandler = (req: Request, res: Response): void => {
         const ticket = getTicketById(id);
         
         res.status(HTTP_STATUS.OK).json({
-            message: "Urgency calculated successfully",
+            message: "Ticket urgency calculated",
             data: {
                 ...ticket,
                 ticketAge: urgencyData.ticketAge,

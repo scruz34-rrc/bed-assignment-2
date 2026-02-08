@@ -7,7 +7,7 @@ let tickets: Ticket[] = [
         description: "Footer still shows 2024",
         priority: "low",
         status: "open",
-        createdAt: "2025-01-12T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -16,7 +16,7 @@ let tickets: Ticket[] = [
         description: "Upload takes 30+ seconds",
         priority: "medium",
         status: "open",
-        createdAt: "2025-01-13T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -25,7 +25,7 @@ let tickets: Ticket[] = [
         description: "Dashboard takes 10+ seconds to load",
         priority: "medium",
         status: "open",
-        createdAt: "2025-01-09T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -34,7 +34,7 @@ let tickets: Ticket[] = [
         description: "Reset emails taking over 30 minutes",
         priority: "high",
         status: "open",
-        createdAt: "2025-01-10T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -43,7 +43,7 @@ let tickets: Ticket[] = [
         description: "PDF export fails silently",
         priority: "high",
         status: "open",
-        createdAt: "2025-01-06T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 9 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -52,7 +52,7 @@ let tickets: Ticket[] = [
         description: "Users report blank screen on login",
         priority: "critical",
         status: "open",
-        createdAt: "2025-01-09T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString()
     },
 
     {
@@ -61,7 +61,16 @@ let tickets: Ticket[] = [
         description: "Dark mode doesn't persist after refresh",
         priority: "medium",
         status: "resolved",
-        createdAt: "2025-01-05T10:00:00.000Z",
+        createdAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString()
+    },
+
+    {
+        id: 8,
+        title: "Boundary test for LOW/MEDIUM",
+        description: "Testing boundary for LOW/MEDIUM at 30",
+        priority: "low",
+        status: "open",
+        createdAt: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000).toISOString()
     }
 ];
 
