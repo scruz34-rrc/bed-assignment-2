@@ -21,3 +21,7 @@ export const createTicket = (ticketData: NewTicketRequest): Ticket => {
 export const updateTicket = (id: number, updates: TicketUpdate): Ticket | null => {
     return ticketsData.updateTicket(id, updates);
 };
+
+export const deleteTicket = (id: number): boolean => {
+    return ticketsData.deleteTicket(id);
+};
