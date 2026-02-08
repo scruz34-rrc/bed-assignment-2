@@ -1,11 +1,19 @@
 import { Ticket, TicketUpdate, NewTicketRequest } from "../interfaces/ticketInterfaces";
-import * as ticketData from "../../../data/tickets";
+import * as ticketsData from "../../../data/tickets";
 
 export const getAllTickets = (): Ticket[] => {
-    return ticketData.getAllTickets();
+    return ticketsData.getAllTickets();
 }
 
 export const getTicketById = (id: number): Ticket | null => {
-    const ticket = ticketData.getTicketById(id);
+    const ticket = ticketsData.getTicketById(id);
     return ticket || null;
+};
+
+export const createTicket = (ticketData: NewTicketRequest): Ticket => {
+    const newTicket = {
+        ...ticketData,
+        status: "open"
+    };
+    return ticketsData.addTicket(newTicket);
 };
