@@ -1,4 +1,4 @@
-import { Ticket } from "../api/v1/interfaces/ticketInterfaces";
+import { Ticket, TicketUpdate } from "../api/v1/interfaces/ticketInterfaces";
 
 let tickets: Ticket[] = [
      {
@@ -87,4 +87,12 @@ export const addTicket = (ticket: {
     };
     tickets.push(newTicket);
     return(newTicket);
+};
+
+export const updateTicket = (id: number, updates: TicketUpdate): Ticket | null => {
+    const index = tickets.findIndex(ticket => ticket.id === id);
+    if (index === -1) return null;
+
+    tickets[index] = {...tickets[index], ...updates};
+    return tickets[index];
 };
