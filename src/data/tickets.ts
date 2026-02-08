@@ -64,3 +64,11 @@ let tickets: Ticket[] = [
         createdAt: "2025-01-05T10:00:00.000Z",
     }
 ];
+
+export const getAllTickets = (): Ticket[] => {
+    return [...tickets];
+};
+
+export const getTicketById = (id: number): Ticket | undefined => {
+    return tickets.find(ticket => ticket.id === id);
+};
