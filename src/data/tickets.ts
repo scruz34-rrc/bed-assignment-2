@@ -96,3 +96,9 @@ export const updateTicket = (id: number, updates: TicketUpdate): Ticket | null =
     tickets[index] = {...tickets[index], ...updates};
     return tickets[index];
 };
+
+export const deleteTicket = (id: number): boolean => {
+    const initialLength = tickets.length;
+    tickets = tickets.filter(ticket => ticket.id !== id);
+    return tickets.length < initialLength;
+};
